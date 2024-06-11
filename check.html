@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Counter</title>
+    <style>
+        .button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #counter {
+            display: block;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Click Counter</h1>
+    <div id="buttons-container">
+        <!-- Buttons 1 to 10 -->
+        <script>
+            for (let i = 1; i <= 10; i++) {
+                document.write(`<button class="button" onclick="incrementCounter()">${i}</button>`);
+            }
+        </script>
+        <!-- Button 11 -->
+        <button class="button" onclick="resetCounter()">11</button>
+    </div>
+    <span id="counter">Counter: 0</span>
+
+    <script>
+        let counter = 0;
+
+        function incrementCounter() {
+            counter++;
+            document.getElementById('counter').innerText = `Counter: ${counter}`;
+        }
+
+        function resetCounter() {
+            counter = 0;
+            document.getElementById('counter').innerText = `Counter: ${counter}`;
+        }
+    </script>
+</body>
+</html>

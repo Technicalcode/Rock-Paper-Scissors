@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input"> 
+    <p id="para">msg goes here</p>
+    <button id="btn" onclick="setinputvalue()">check</button>
+
+
+
+    <script >
+        const input = document.querySelector("#input")
+        const btn = document.querySelector("#btn")
+        const para = document.querySelector("#para")
+        function setinputvalue() {
+            // const input = document.querySelector("#input")
+            // const btn = document.querySelector("#btn")
+            
+            
+        
+        var computer = Math.floor(Math.random()*9)
+        var user = Math.floor(Math.random()*9)
+        if(computer>user){
+
+             console.log("computer is greater number than user")
+             input.value = computer;
+             para.innerText = `computer is greater number than user`
+        }
+        else{
+            console.log("user is greater number than computer")
+            input.value = user;
+            para.innerText = `user is greater number than computer`
+        }
+    }
+    </script>
+</body>
+</html>
